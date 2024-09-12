@@ -19,7 +19,6 @@ import email from "../images/Email.png";
 import twitter from "../images/twitter.png";
 import linkedin from "../images/linkedin.png";
 import Carousel from "./Carousel";
-import profilepic from "../images/profilepic.jpg";
 
 function Portfolio() {
   const [isopen, Setisopen] = useState(false);

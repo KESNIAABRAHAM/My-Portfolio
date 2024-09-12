@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-scroll";
-import profilepic from "../images/profilepic.jpg";
 
 const Navbar = () => {
   return (
