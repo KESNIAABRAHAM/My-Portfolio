@@ -77,9 +77,6 @@ function Portfolio() {
         <h2 className="text-white text-center text-1xl mt-8 mb-8">
           My Tech Stack
         </h2>
-        <h1 className="text-white mb-6">
-          Technologies i've been working with recently
-        </h1>
 
         <div className="flex justify-between space-x-2">
           <img src={csslogo} alt="csslogo" className="w-10 h-10" />
@@ -99,7 +96,6 @@ function Portfolio() {
         <h2 className="text-orange-400 text-3xl mt-10 mb-10" id="projects">
           PROJECTS
         </h2>
-        <h1 className="text-white mb-8">Things i have built so far</h1>
 
         <div className="flex flex-wrap justify-between space-x-4">
           <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-700 justify-between mx-auto mb-8">
