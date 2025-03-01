@@ -30,7 +30,7 @@ function Portfolio() {
   };
   return (
     <div className="bg-black mx-auto min-h-screen ">
-      <div className="bg-gray-900 fixed w-full flex-wrap">
+      <div className="bg-gray-900 fixed w-full flex-wrap z-20">
         <div className="hidden w-full md:flex">
           <div className="mx-auto">
             <Navbar />
@@ -97,7 +97,7 @@ function Portfolio() {
           My Tech Stack
         </h2>
 
-        <div className="relative w-full overflow-hidden">
+        <div className="relative w-full overflow-hidden z-10">
           <div className="marquee space-x-5">
             <img src={csslogo} alt="csslogo" className="w-10 h-10" />
             <img
