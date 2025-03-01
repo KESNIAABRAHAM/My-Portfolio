@@ -1,10 +1,9 @@
 import React from "react";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-
 import Navbar from "./Navbar.jsx";
 import csslogo from "../images/cssicon.png";
-
+import "../components/Marquee.css";
 import javascriptlogo from "../images/javascriptlogo.png";
 import htmllogo from "../images/htmllogo.png";
 import firebaselogo from "../images/firebaselogo.png";
@@ -12,17 +11,19 @@ import pythonlogo from "../images/pythonlogo.png";
 import reacticon from "../images/reacticon.png";
 import tailwindlogo from "../images/tailwindlogo.png";
 import jquerylogo from "../images/jquerylogo.png";
-import Todoapp from "../images/Todoapp.png";
-import Calculatorapp from "../images/Calculatorapp.png";
-import Lnsapp from "../images/Lnsapp.png";
 import github from "../images/github.png";
 import email from "../images/Email.png";
 import twitter from "../images/twitter.png";
 import linkedin from "../images/linkedin.png";
 import Carousel from "./Carousel";
 
+import Specificproject from "./Specificproject.jsx";
+
 function Portfolio() {
   const [isopen, Setisopen] = useState(false);
+  const project1 = 1;
+  const project2 = 2;
+  const project3 = 3;
 
   const toggleNavbar = () => {
     Setisopen(!isopen);
@@ -55,11 +56,11 @@ function Portfolio() {
         </h1>
 
         <h2 className="text-white mx-auto text-center">
-          I am a seasoned full-stack software engineer with over <br />
-          4 years of professional experience. specializing in frontend
-          development.
-          <br /> My expertise lies in crafting robust and scalable SaaS-based
-          architectures on the Amazon AWS platform.
+          <div className="mb-2">I am a dedicated frontend developer with over 4 years of professional experience.</div>
+          <div className="mb-2">My passion lies in creating seamless and responsive user interfaces that enhance user experience. My expertise lies</div>
+          <div className="mb-2">in crafting robust and scalable SaaS-based architectures on the Amazon AWS platform With a deep expertise in modern frontend technologies,</div>
+          <div className="mb-2">I excel at building visually appealing and performant web applications. I specialize in React, CSS, JavaScript, and </div>
+          <div className="mb-2">Tailwind CSS, and I take pride in writing clean and maintainable code. My goal is to craft intuitive and engaging user experiences that delight users and drive business success.</div>
         </h2>
 
         <div className="flex justify-between space-x-2 mt-4 mb-4">
@@ -79,89 +80,33 @@ function Portfolio() {
           My Tech Stack
         </h2>
 
-        <div className="flex justify-between space-x-2">
-          <img src={csslogo} alt="csslogo" className="w-10 h-10" />
-          <img
-            src={javascriptlogo}
-            alt="javascriptlogo"
-            className="w-10 h-10"
-          />
-          <img src={firebaselogo} alt="firebaselogo" className="w-12 h-15" />
-          <img src={reacticon} alt="reacticon" className="w-10 h-10" />
-          <img src={htmllogo} alt="htmlogo" className="w-10 h-10" />
-          <img src={pythonlogo} alt="pythonlogo" className="w-10 h-10" />
-          <img src={tailwindlogo} alt="tailwindlogo" className="w-10 h-10" />
-          <img src={jquerylogo} alt="jquerylogo" className="w-8 h-10" />
+        <div className="relative w-full overflow-hidden">
+          <div className="marquee space-x-5">
+            <img src={csslogo} alt="csslogo" className="w-10 h-10" />
+            <img
+              src={javascriptlogo}
+              alt="javascriptlogo"
+              className="w-10 h-10"
+            />
+            <img src={firebaselogo} alt="firebaselogo" className="w-12 h-15 " />
+            <img src={reacticon} alt="reacticon" className="w-10 h-10 " />
+            <img src={htmllogo} alt="htmlogo" className="w-10 h-10 " />
+            <img src={pythonlogo} alt="pythonlogo" className="w-10 h-10 " />
+            <img src={tailwindlogo} alt="tailwindlogo" className="w-10 h-10 " />
+            <img src={jquerylogo} alt="jquerylogo" className="w-8 h-10 " />
+          </div>
         </div>
 
         <h2 className="text-orange-400 text-3xl mt-10 mb-10" id="projects">
           PROJECTS
         </h2>
 
-        <div className="flex flex-wrap justify-between space-x-4">
-          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-700 justify-between mx-auto mb-8">
-            <img src={Todoapp} alt="todoapp" />
-            <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2 text-white text-center">
-                TO DO APP
-              </div>
-              <p className="text-white text-base">
-                This Todo App, built using React for dynamic UI and Tailwind CSS
-                for streamlined styling, allows users to easily add, edit, and
-                delete tasks. With a clean, responsive design, it provides a
-                seamless user experience on both desktop and mobile. The app
-                efficiently manages state with React hooks, ensuring real-time
-                updates and smooth interactions.
-              </p>
-              <a href="http://to-do-app-kohl-seven.vercel.app/">
-                <button className="bg-green-700 text-1xl py-2 px-10 rounded border border-black  font-semibold mx-auto block mt-4">
-                  Explore Project
-                </button>
-              </a>
-            </div>
-          </div>
+        <div className="flex flex-wrap justify-between space-x-4 text-center">
+          <Specificproject projectId={project1} />
 
-          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-700 justify-between mx-auto mb-8 ">
-            <img src={Lnsapp} alt="" />
-            <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2 text-white">
-                University Navigation System | React, Firebase & Leaflet.js
-              </div>
-              <p className="text-white text-base">
-                This location navigation system, developed with React+Vite,
-                utilizes Firebase for secure user authentication and Leaflet.js
-                for mapping. Leaflet Routing Machine efficiently provides
-                routes, helping users easily navigate the university
-                environment. The system combines a smooth UI with accurate,
-                real-time navigation, delivering a user-friendly experience.
-              </p>
-              <a href="https://mtu-lns.vercel.app/">
-                <button className="bg-purple-700 text-1xl py-2 px-10 rounded border border-black font-semibold mx-auto block mt-4">
-                  Explore Project
-                </button>
-              </a>
-            </div>
-          </div>
+          <Specificproject projectId={project2} />
 
-          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-700 justify-between mx-auto mb-7">
-            <img src={Calculatorapp} alt="" />
-            <div className="px-3 py-4 rounded-lg">
-              <div className="font-bold text-xl mb-2 text-white">
-                Basic Calculator | HTML5, CSS3 & JavaScript
-              </div>
-              <p className="text-white text-base">
-                This responsive basic calculator, built with HTML5, CSS3, and
-                JavaScript, handles essential arithmetic operations efficiently.
-                Designed with a focus on usability, it adapts seamlessly to any
-                screen size, providing a smooth experience across all devices.
-              </p>
-              <a href="https://calculator-web-app.tiiny.site/">
-                <button className="bg-blue-700 text-1xl py-2 px-10 rounded border border-black font-semibold mx-auto block mt-4">
-                  Explore project
-                </button>
-              </a>
-            </div>
-          </div>
+          <Specificproject projectId={project3} />
         </div>
 
         <section id="experience">

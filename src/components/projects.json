@@ -1,0 +1,25 @@
+[
+    {
+      "id": 1,
+      "name": "TO DO APP",
+      "description": "This Todo App, built using React for dynamic UI and Tailwind CSS for streamlined styling, allows users to easily add, edit, and delete tasks. With a clean, responsive design, it provides a seamless user experience on both desktop and mobile. The app efficiently manages state with React hooks, ensuring real-time updates and smooth interactions.",
+      "image": "images/Todoapp.png",
+      "link": "http://to-do-app-kohl-seven.vercel.app/"
+    },
+
+    {
+        "id": 2,
+        "name": " University Navigation System | React, Firebase & Leaflet.js",
+        "description": "This location navigation system, developed with React+Vite,utilizes Firebase for secure user authentication and Leaflet.js for mapping. Leaflet Routing Machine efficiently provides routes, helping users easily navigate the university environment. The system combines a smooth UI with accurate,real-time navigation, delivering a user-friendly experience.",
+        "image": "images/Lnsapp.png",
+        "link": "https://mtu-lns.vercel.app/"
+      },
+
+      {
+        "id": 3,
+        "name": "Basic Calculator | HTML5, CSS3 & JavaScript",
+        "description": "This responsive basic calculator, built with HTML5, CSS3, and JavaScript, handles essential arithmetic operations efficiently. Designed with a focus on usability, it adapts seamlessly to any screen size, providing a smooth experience across all devices.",
+        "image": "images/Calculatorapp.png",
+        "link": "https://calculator-web-app.tiiny.site/"
+      }
+  ]
