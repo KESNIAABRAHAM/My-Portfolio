@@ -56,11 +56,28 @@ function Portfolio() {
         </h1>
 
         <h2 className="text-white mx-auto text-center">
-          <div className="mb-2">I am a dedicated frontend developer with over 4 years of professional experience.</div>
-          <div className="mb-2">My passion lies in creating seamless and responsive user interfaces that enhance user experience. My expertise lies</div>
-          <div className="mb-2">in crafting robust and scalable SaaS-based architectures on the Amazon AWS platform With a deep expertise in modern frontend technologies,</div>
-          <div className="mb-2">I excel at building visually appealing and performant web applications. I specialize in React, CSS, JavaScript, and </div>
-          <div className="mb-2">Tailwind CSS, and I take pride in writing clean and maintainable code. My goal is to craft intuitive and engaging user experiences that delight users and drive business success.</div>
+          <div className="mb-2">
+            I am a dedicated frontend developer with over 4 years of
+            professional experience.
+          </div>
+          <div className="mb-2">
+            My passion lies in creating seamless and responsive user interfaces
+            that enhance user experience. My expertise lies
+          </div>
+          <div className="mb-2">
+            in crafting robust and scalable SaaS-based architectures on the
+            Amazon AWS platform With a deep expertise in modern frontend
+            technologies,
+          </div>
+          <div className="mb-2">
+            I excel at building visually appealing and performant web
+            applications. I specialize in React, CSS, JavaScript, and{" "}
+          </div>
+          <div className="mb-2">
+            Tailwind CSS, and I take pride in writing clean and maintainable
+            code. My goal is to craft intuitive and engaging user experiences
+            that delight users and drive business success.
+          </div>
         </h2>
 
         <div className="flex justify-between space-x-2 mt-4 mb-4">

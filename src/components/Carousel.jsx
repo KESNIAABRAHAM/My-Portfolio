@@ -11,17 +11,17 @@ const Carousel = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(()=>{
-    const preloadImage = (url) =>{
-      const link = document.createElement("link")
-      link.rel= 'preload';
-      link.as = 'image';
+  useEffect(() => {
+    const preloadImage = (url) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
       link.href = url;
-    }
+    };
     preloadImage(profilepic);
     preloadImage(profilepic2);
     preloadImage(profilepic3);
-  })
+  });
 
   useEffect(() => {
     const interval = setInterval(() => {
