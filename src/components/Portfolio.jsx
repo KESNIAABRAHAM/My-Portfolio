@@ -1,4 +1,3 @@
-import React from "react";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Navbar from "./Navbar.jsx";
@@ -24,6 +23,7 @@ function Portfolio() {
   const project1 = 1;
   const project2 = 2;
   const project3 = 3;
+  const project4 = 4;
 
   const toggleNavbar = () => {
     Setisopen(!isopen);
@@ -124,6 +124,9 @@ function Portfolio() {
           <Specificproject projectId={project2} />
 
           <Specificproject projectId={project3} />
+
+          <Specificproject projectId={project4}/>
+
         </div>
 
         <section id="experience">
