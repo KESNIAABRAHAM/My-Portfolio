@@ -32,7 +32,7 @@ function Portfolio() {
     <div className="bg-black mx-auto min-h-screen ">
       <div className="bg-gray-900 fixed w-full flex-wrap z-20">
         <div className="hidden w-full md:flex">
-          <div className="mx-auto">
+          <div className="ml-auto">
             <Navbar />
           </div>
         </div>
@@ -86,7 +86,10 @@ function Portfolio() {
               Get in Touch
             </button>
           </a>
-          <a href="https://drive.google.com/file/d/14uRJKDDXdqOSI0owI_wySQki1AYKjgAt/view?usp=drive_link">
+          <a
+            href="https://drive.google.com/uc?export=download&id=14uRJKDDXdqOSI0owI_wySQki1AYKjgAt"
+            download
+          >
             <button className="bg-transparent text-white font-semibold py-2 px-4 border border-white rounded-3xl">
               Download CV
             </button>
@@ -125,8 +128,7 @@ function Portfolio() {
 
           <Specificproject projectId={project3} />
 
-          <Specificproject projectId={project4}/>
-
+          <Specificproject projectId={project4} />
         </div>
 
         <section id="experience">

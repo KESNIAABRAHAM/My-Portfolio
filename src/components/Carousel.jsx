@@ -1,53 +1,23 @@
-import React, { useState, useEffect } from "react";
-
 import { useTypewriter } from "react-simple-typewriter";
-
-import profilepic from "../images/profilepic.jpg";
-import profilepic2 from "../images/profilepic2.jpg";
-import profilepic3 from "../images/profilepic3.jpg";
+import avatar from "../images/Avatar.png";
 
 const Carousel = () => {
-  const pics = [profilepic, profilepic2, profilepic3];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const preloadImage = (url) => {
-      const link = document.createElement("link");
-      link.rel = "preload";
-      link.as = "image";
-      link.href = url;
-    };
-    preloadImage(profilepic);
-    preloadImage(profilepic2);
-    preloadImage(profilepic3);
-  });
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % pics.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [pics.length]);
-
   const [text] = useTypewriter({
-    words: ["Frontend Developer", "IT Technician"],
+    words: ["Frontend Engineer", "IT Technician"],
     loop: 0,
   });
 
   return (
-    <div>
-      <h2 className="text-white text-center mb-2 mt-20">
-        Hi! i am Kesnia Uchendu
+    <div className="flex flex-col items-center mt-20 relative">
+      <h2 className="text-white text-center mb-2">Hey there! I'm Kesnia 👋</h2>
+      <h2 className="text-white text-center mb-4">
+        And I am a <span className="text-green-500">{text}</span>
       </h2>
-      <h2 className="text-white text-center">
-        And i am a <span className="text-green-500">{text}</span>
-      </h2>
+
       <img
-        src={pics[currentIndex]}
-        alt={`Carousel ${currentIndex}`}
-        className="w-80 h-50 rounded-full mt-20"
+        src={avatar}
+        alt="avatar"
+        className="w-40 h-25 rounded-full bg-gradient-to-b from-orange-500 to-purple-500 object-cover block shrink-0"
       />
     </div>
   );
