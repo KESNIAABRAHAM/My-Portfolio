@@ -57,8 +57,8 @@ function Portfolio() {
 
         <h2 className="text-white mx-auto text-center">
           <div className="mb-2">
-            I am a dedicated frontend developer with over 4 years of
-            professional experience.
+            I am a dedicated Frontend Engineer with over 4 years of professional
+            experience.
           </div>
           <div className="mb-2">
             My passion lies in creating seamless and responsive user interfaces
@@ -120,15 +120,30 @@ function Portfolio() {
         <h2 className="text-orange-400 text-3xl mt-10 mb-10" id="projects">
           PROJECTS
         </h2>
+        {/* Mobile & Tablet Layout */}
+        <div className="block lg:hidden">
+          <div className="sm:grid grid-cols-2 gap-8 text-center">
+            <Specificproject projectId={project1} />
+            <Specificproject projectId={project2} />
+            <Specificproject projectId={project3} />
+            <Specificproject projectId={project4} />
+          </div>
+        </div>
 
-        <div className="flex flex-wrap justify-between space-x-4 text-center">
-          <Specificproject projectId={project1} />
-
-          <Specificproject projectId={project2} />
-
-          <Specificproject projectId={project3} />
-
-          <Specificproject projectId={project4} />
+        {/* Laptop & Desktop Layout */}
+        <div className="hidden lg:flex flex-nowrap justify-between space-x-4 text-center">
+          <div className="">
+            <Specificproject projectId={project1} />
+          </div>
+          <div className="">
+            <Specificproject projectId={project2} />
+          </div>
+          <div className="">
+            <Specificproject projectId={project3} />
+          </div>
+          <div className="">
+            <Specificproject projectId={project4} />
+          </div>
         </div>
 
         <section id="experience">
