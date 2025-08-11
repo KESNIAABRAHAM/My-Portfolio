@@ -15,6 +15,8 @@ import email from "../images/Email.png";
 import twitter from "../images/twitter.png";
 import linkedin from "../images/linkedin.png";
 import Carousel from "./Carousel";
+import typescriptlogo from "../images/Typescriptlogo.png";
+import logo from "../images/logo.png";
 
 import Specificproject from "./Specificproject.jsx";
 
@@ -32,13 +34,23 @@ function Portfolio() {
     <div className="bg-black mx-auto min-h-screen ">
       <div className="bg-gray-900 fixed w-full flex-wrap z-20">
         <div className="hidden w-full md:flex">
-          <div className="ml-auto">
-            <Navbar />
-          </div>
+       <div className="flex-shrink-0">
+                 <img src={logo} alt="Brand Logo" className="w-20 h-auto" />
+               </div>
+          <Navbar />
+          
         </div>
 
-        <div className="md:hidden text-green-500 ml-[90%]">
-          <button onClick={toggleNavbar}>{isopen ? <X /> : <Menu />}</button>
+        <div className="flex items-center justify-between px-3 py-2 md:hidden">
+          {/* Logo on the far left */}
+          <div className="flex-shrink-0">
+            <img src={logo} alt="Brand logo" className="w-10" />
+          </div>
+
+          {/* Menu icon on the far right */}
+          <div className="text-green-500">
+            <button onClick={toggleNavbar}>{isopen ? <X /> : <Menu />}</button>
+          </div>
         </div>
 
         {isopen && (
@@ -114,6 +126,7 @@ function Portfolio() {
             <img src={pythonlogo} alt="pythonlogo" className="w-10 h-10 " />
             <img src={tailwindlogo} alt="tailwindlogo" className="w-10 h-10 " />
             <img src={jquerylogo} alt="jquerylogo" className="w-8 h-10 " />
+            <img src={typescriptlogo} alt="typescriptlogo" className="w-8 h-10 " />
           </div>
         </div>
 
