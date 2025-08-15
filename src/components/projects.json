@@ -29,6 +29,15 @@
         "description": "Simplify and streamline your URLs with ease. Instantly shorten long links, customize them for a personal touch, and track clicks effortlessly",
         "image": "images/linkzap.png",
         "link": "https://link-zap-woad.vercel.app/"
+      },
+
+      
+      {
+        "id": 5,
+        "name": "AI for business analytics in Practice",
+        "description": "Built predictive models using logistic regression and decision trees to forecast product return likelihood for GlobalStore Inc. Leveraged Python libraries like pandas, scikit-learn, and seaborn to analyze thousands of transactions and uncover customer behavior patterns. The solution helps reduce returns, boost satisfaction, and minimize e-waste.",
+        "image": "images/AIBusiness.png",
+        "link": "https://github.com/KESNIAABRAHAM/ML-Business-Analytics"
       }
 
   ]

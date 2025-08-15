@@ -1,6 +1,4 @@
-import React from "react";
 import { Link } from "react-scroll";
-import logo from "../images/logo.png"; // Assuming you have a logo image
 const Navbar = () => {
   return (
     <>

@@ -17,8 +17,12 @@ import linkedin from "../images/linkedin.png";
 import Carousel from "./Carousel";
 import typescriptlogo from "../images/Typescriptlogo.png";
 import logo from "../images/logo.png";
+import vitelogo from "../images/Vitelogo.png";
+import jupyterlogo from "../images/Jupyterlogo.png";
 
 import Specificproject from "./Specificproject.jsx";
+
+import { motion } from "framer-motion";
 
 function Portfolio() {
   const [isopen, Setisopen] = useState(false);
@@ -26,19 +30,20 @@ function Portfolio() {
   const project2 = 2;
   const project3 = 3;
   const project4 = 4;
+  const project5 = 5;
 
   const toggleNavbar = () => {
     Setisopen(!isopen);
   };
+
   return (
     <div className="bg-black mx-auto min-h-screen ">
       <div className="bg-gray-900 fixed w-full flex-wrap z-20">
         <div className="hidden w-full md:flex">
-       <div className="flex-shrink-0">
-                 <img src={logo} alt="Brand Logo" className="w-20 h-auto" />
-               </div>
+          <div className="flex-shrink-0">
+            <img src={logo} alt="Brand Logo" className="w-20 h-auto" />
+          </div>
           <Navbar />
-          
         </div>
 
         <div className="flex items-center justify-between px-3 py-2 md:hidden">
@@ -62,37 +67,24 @@ function Portfolio() {
 
       <div className="flex flex-col items-center justify-center" id="home">
         <Carousel />
-
-        <h1 className="text-white text-4xl font-bold mt-4 mb-4">
+        <h1 className="text-white text-4xl font-bold mt-4 mb-7">
           I code & Chill 🍿
         </h1>
 
-        <h2 className="text-white mx-auto text-center">
-          <div className="mb-2">
-            I am a dedicated Frontend Engineer with over 4 years of professional
-            experience.
-          </div>
-          <div className="mb-2">
-            My passion lies in creating seamless and responsive user interfaces
-            that enhance user experience. My expertise lies
-          </div>
-          <div className="mb-2">
-            in crafting robust and scalable SaaS-based architectures on the
-            Amazon AWS platform With a deep expertise in modern frontend
-            technologies,
-          </div>
-          <div className="mb-2">
-            I excel at building visually appealing and performant web
-            applications. I specialize in React, CSS, JavaScript, and{" "}
-          </div>
-          <div className="mb-2">
-            Tailwind CSS, and I take pride in writing clean and maintainable
-            code. My goal is to craft intuitive and engaging user experiences
-            that delight users and drive business success.
-          </div>
+        <h2 className="text-white max-w-3xl text-center">
+          I’m a Frontend Engineer with over 3 years of professional experience
+          building responsive and user-focused web applications. I take pride in
+          writing clean, maintainable code that scales well across projects. I
+          focus on crafting intuitive interfaces and smooth user experiences,
+          with attention to performance and design consistency. I enjoy working
+          with modern frontend tools and techniques, including component-based
+          architecture and animation libraries. Whether building solo or
+          collaborating with teams, I bring a thoughtful approach to UI
+          development and a commitment to delivering polished, functional
+          products.
         </h2>
 
-        <div className="flex justify-between space-x-2 mt-4 mb-4">
+        <div className="flex justify-between space-x-2 mt-10 mb-5 ">
           <a href="https://wa.me/+2348127500146">
             <button className="bg-white text-black font-bold py-2 px-4 rounded-3xl">
               Get in Touch
@@ -107,11 +99,9 @@ function Portfolio() {
             </button>
           </a>
         </div>
-
         <h2 className="text-white text-center text-1xl mt-8 mb-8">
           My Tech Stack
         </h2>
-
         <div className="relative w-full overflow-hidden z-10">
           <div className="marquee space-x-5">
             <img src={csslogo} alt="csslogo" className="w-10 h-10" />
@@ -120,31 +110,48 @@ function Portfolio() {
               alt="javascriptlogo"
               className="w-10 h-10"
             />
-            <img src={firebaselogo} alt="firebaselogo" className="w-12 h-15 " />
+            <img
+              src={firebaselogo}
+              alt="firebaselogo"
+              className="w-12 h-15  "
+            />
             <img src={reacticon} alt="reacticon" className="w-10 h-10 " />
             <img src={htmllogo} alt="htmlogo" className="w-10 h-10 " />
             <img src={pythonlogo} alt="pythonlogo" className="w-10 h-10 " />
             <img src={tailwindlogo} alt="tailwindlogo" className="w-10 h-10 " />
             <img src={jquerylogo} alt="jquerylogo" className="w-8 h-10 " />
-            <img src={typescriptlogo} alt="typescriptlogo" className="w-8 h-10 " />
+            <img
+              src={typescriptlogo}
+              alt="typescriptlogo"
+              className="w-8 h-10 "
+            />
+            <img src={vitelogo} alt="vitelogo" className="w-8 h-10 " />
+            <img src={jupyterlogo} alt="jupyterlogo" className="w-8 h-10 " />
           </div>
         </div>
-
         <h2 className="text-orange-400 text-3xl mt-10 mb-10" id="projects">
           PROJECTS
         </h2>
         {/* Mobile & Tablet Layout */}
-        <div className="block lg:hidden">
+        <motion.div className="block lg:hidden">
           <div className="sm:grid grid-cols-2 gap-8 text-center">
-            <Specificproject projectId={project1} />
-            <Specificproject projectId={project2} />
-            <Specificproject projectId={project3} />
-            <Specificproject projectId={project4} />
+            {[project1, project2, project3, project4, project5].map(
+              (project, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.35, ease: "easeOut" }}
+                  viewport={{ amount: 0.2 }} // removed "once: true"
+                >
+                  <Specificproject projectId={project} />
+                </motion.div>
+              )
+            )}
           </div>
-        </div>
-
+        </motion.div>
         {/* Laptop & Desktop Layout */}
-        <div className="hidden lg:flex flex-nowrap justify-between space-x-4 text-center">
+        <motion.div className="hidden lg:flex flex-nowrap justify-between space-x-4 text-center">
           <div className="">
             <Specificproject projectId={project1} />
           </div>
@@ -157,8 +164,10 @@ function Portfolio() {
           <div className="">
             <Specificproject projectId={project4} />
           </div>
-        </div>
-
+          <div className="">
+            <Specificproject projectId={project5} />
+          </div>
+        </motion.div>
         <section id="experience">
           <h2 className="text-blue-500 text-3xl mt-4 text-center">
             EXPERIENCE
@@ -267,7 +276,6 @@ function Portfolio() {
             </p>
           </div>
         </section>
-
         <section id="contact">
           <div className="mt-5 w-full">
             <footer className="bg-gray-950 text-white p-8 flex flex-col items-center ">
