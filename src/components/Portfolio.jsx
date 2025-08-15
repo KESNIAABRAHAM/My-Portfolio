@@ -142,7 +142,7 @@ function Portfolio() {
                   initial={{ opacity: 0, y: 30, scale: 0.95 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.35, ease: "easeOut" }}
-                  viewport={{ amount: 0.2 }} // removed "once: true"
+                  viewport={{ amount: 0.2 }}
                 >
                   <Specificproject projectId={project} />
                 </motion.div>
