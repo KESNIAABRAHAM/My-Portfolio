@@ -13,8 +13,6 @@ function App() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://kes-dev-portfolio.vercel.app/" />
         <meta property="og:image" content="https://kes-dev-portfolio.vercel.app/og-image.png" />
-   
-
       </Helmet>
        <Portfolio/>
     
