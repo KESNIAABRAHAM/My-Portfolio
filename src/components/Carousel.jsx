@@ -3,14 +3,14 @@ import avatar from "../images/Avatar.png";
 
 const Carousel = () => {
   const [text] = useTypewriter({
-    words: ["Frontend Engineer", "IT Technician"],
+    words: ["Frontend Engineer", "Software Engineer"],
     loop: 0,
   });
 
   return (
     <div className="flex flex-col items-center mt-20 relative">
-      <h2 className="text-white text-center mt-3">Hey there! I'm Kesnia 👋</h2>
-      <h2 className="text-white text-center mb-4">
+      <h2 className="text-white text-center mt-10 font-bold font-marker text-3xl">Hey there! I'm Kesnia 👋</h2>
+      <h2 className="text-white text-center m-4 font-bold text-2xl font-marker">
         And I am a <span className="text-green-500">{text}</span>
       </h2>
 

@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import Navbar from "./Navbar.jsx";
+import Navbar from "./navbar.jsx";
 import csslogo from "../images/cssicon.png";
 import "../components/Marquee.css";
 import javascriptlogo from "../images/javascriptlogo.png";
@@ -12,19 +12,23 @@ import tailwindlogo from "../images/tailwindlogo.png";
 import jquerylogo from "../images/jquerylogo.png";
 import github from "../images/github.png";
 import email from "../images/Email.png";
-import twitter from "../images/twitter.png";
 import linkedin from "../images/linkedin.png";
 import Carousel from "./Carousel";
-import typescriptlogo from "../images/Typescriptlogo.png";
 import logo from "../images/logo.png";
 import vitelogo from "../images/Vitelogo.png";
 import jupyterlogo from "../images/Jupyterlogo.png";
-
+import Npmlogo from "../images/NPM.png";
+import Azioslogo from "../images/Azios.png";
+import Typescriptlogo from "../images/TypeScript.png";
+import Navbarmobile from "./navbarmobile.tsx";
 import Specificproject from "./Specificproject.jsx";
 
 import { motion } from "framer-motion";
+import { useForm } from "@formspree/react";
+import { useEffect } from "react";
+import { toast } from "sonner";
 
-function Portfolio() {
+const Portfolio = () => {
   const [isopen, Setisopen] = useState(false);
   const project1 = 1;
   const project2 = 2;
@@ -36,17 +40,27 @@ function Portfolio() {
     Setisopen(!isopen);
   };
 
+  const [state, handleSubmit] = useForm("manpbqzd");
+
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success("Sent sucessfully");
+    } else if (state.errors) {
+      toast.error("Something went wrong.");
+    }
+  }, [state.succeeded, state.errors]);
+
   return (
     <div className="bg-black mx-auto min-h-screen ">
-      <div className="bg-gray-900 fixed w-full flex-wrap z-20">
-        <div className="hidden w-full md:flex">
-          <div className="flex-shrink-0">
+      <div className="fixed w-full flex-wrap z-20">
+        <div className="hidden w-full lg:flex">
+          <div className="flex-shrink-0 ml-5 mt-3">
             <img src={logo} alt="Brand Logo" className="w-20 h-auto" />
           </div>
           <Navbar />
         </div>
 
-        <div className="flex items-center justify-between px-3 py-2 md:hidden">
+        <div className="flex items-center justify-between px-3 py-2 lg:hidden">
           {/* Logo on the far left */}
           <div className="flex-shrink-0">
             <img src={logo} alt="Brand logo" className="w-10" />
@@ -59,19 +73,31 @@ function Portfolio() {
         </div>
 
         {isopen && (
-          <div>
-            <Navbar />
+          <div className="fixed top-0 right-0 h-full w-64 bg-black/10 backdrop-blur-md z-50">
+            <button
+              onClick={toggleNavbar}
+              className="absolute top-4 right-4 text-green-500"
+            >
+              <X />
+            </button>
+            <Navbarmobile />
           </div>
         )}
       </div>
 
-      <div className="flex flex-col items-center justify-center" id="home">
+      <section
+        className="flex flex-col items-center justify-center px-3"
+        id="home"
+      >
         <Carousel />
-        <h1 className="text-white text-4xl font-bold mt-4 mb-7">
-          I code & Chill 🍿
+        <h1 className="text-white text-3xl font-bold mt-4 mb-7 font-marker">
+          I code for a living🤯
         </h1>
 
-        <h2 className="text-white max-w-3xl text-center">
+        <h2
+          className="text-white max-w-3xl text-center text-md font-satoshi"
+          data-aos="zoom-in-up"
+        >
           I’m a Frontend Engineer with over 3 years of professional experience
           building responsive and user-focused web applications. I take pride in
           writing clean, maintainable code that scales well across projects. I
@@ -84,9 +110,12 @@ function Portfolio() {
           products.
         </h2>
 
-        <div className="flex justify-between space-x-2 mt-10 mb-5 ">
+        <div
+          className="flex justify-between space-x-6 mt-20 mb-5 "
+          data-aos="fade-up"
+        >
           <a href="https://wa.me/+2348127500146">
-            <button className="bg-white text-black font-bold py-2 px-4 rounded-3xl">
+            <button className="bg-white text-black font-bold py-4 px-10 rounded-2xl font-marker">
               Get in Touch
             </button>
           </a>
@@ -94,235 +123,250 @@ function Portfolio() {
             href="https://drive.google.com/uc?export=download&id=14uRJKDDXdqOSI0owI_wySQki1AYKjgAt"
             download
           >
-            <button className="bg-transparent text-white font-semibold py-2 px-4 border border-white rounded-3xl">
+            <button className="bg-transparent text-white font-semibold py-4 px-10 border border-white rounded-2xl font-marker">
               Download CV
             </button>
           </a>
         </div>
-        <h2 className="text-white text-center text-1xl mt-8 mb-8">
-          My Tech Stack
-        </h2>
-        <div className="relative w-full overflow-hidden z-10">
-          <div className="marquee space-x-5">
-            <img src={csslogo} alt="csslogo" className="w-10 h-10" />
-            <img
-              src={javascriptlogo}
-              alt="javascriptlogo"
-              className="w-10 h-10"
-            />
-            <img
-              src={firebaselogo}
-              alt="firebaselogo"
-              className="w-12 h-15  "
-            />
-            <img src={reacticon} alt="reacticon" className="w-10 h-10 " />
-            <img src={htmllogo} alt="htmlogo" className="w-10 h-10 " />
-            <img src={pythonlogo} alt="pythonlogo" className="w-10 h-10 " />
-            <img src={tailwindlogo} alt="tailwindlogo" className="w-10 h-10 " />
-            <img src={jquerylogo} alt="jquerylogo" className="w-8 h-10 " />
-            <img
-              src={typescriptlogo}
-              alt="typescriptlogo"
-              className="w-8 h-10 "
-            />
-            <img src={vitelogo} alt="vitelogo" className="w-8 h-10 " />
-            <img src={jupyterlogo} alt="jupyterlogo" className="w-8 h-10 " />
-          </div>
+      </section>
+      <h2
+        id="Mystack"
+        className="text-green-500 text-center text-2xl mt-[20%] mb-8 font-marker"
+      >
+        Skills
+      </h2>
+      <div className="relative w-full overflow-hidden z-10">
+        <div className="marquee space-x-5">
+          <img src={csslogo} alt="csslogo" className="w-50 h-20" />
+          <img
+            src={javascriptlogo}
+            alt="javascriptlogo"
+            className="w-50 h-20"
+          />
+          <img src={firebaselogo} alt="firebaselogo" className="w-50 h-20" />
+          <img src={htmllogo} alt="htmllogo" className="w-50 h-20 " />
+          <img src={pythonlogo} alt="pythonlogo" className="w-50 h-20 " />
+          <img src={reacticon} alt="reacticon" className="w-50 h-20 " />
+          <img
+            src={Typescriptlogo}
+            alt="Typescriptlogo"
+            className="w-50 h-20 "
+          />
+          <img src={tailwindlogo} alt="tailwindlogo" className="w-50 h-20 " />
+          <img src={Npmlogo} alt="Npmlogo" className="w-50 h-20 " />
+          <img src={vitelogo} alt="vitelogo" className="w-50 h-20 " />
+          <img src={Azioslogo} alt="Azioslogo" className="w-50 h-20 " />
+          <img src={jquerylogo} alt="jquerylogo" className="w-50 h-20 " />
+          <img src={jupyterlogo} alt="jupyterlogo" className="w-50 h-20 " />
         </div>
-        <h2 className="text-orange-400 text-3xl mt-10 mb-10" id="projects">
+      </div>
+
+      <section id="projects" className="mt-40 ">
+        <h2 className="text-green-500 text-2xl mt-10 mb-10 text-center font-marker">
           PROJECTS
         </h2>
         {/* Mobile & Tablet Layout */}
-        <motion.div className="block lg:hidden">
-          <div className="sm:grid grid-cols-2 gap-8 text-center">
-            {[project1, project2, project3, project4, project5].map(
-              (project, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.35, ease: "easeOut" }}
-                  viewport={{ amount: 0.2 }}
-                >
-                  <Specificproject projectId={project} />
-                </motion.div>
-              )
-            )}
+        <div className="block lg:hidden mt-0 pt-0">
+          <div className="sm:grid grid-cols-2 gap-8 text-center px-4">
+            <div
+              data-aos="slide-right"
+              data-aos-delay="300"
+              className="mt-0 pt-0"
+            >
+              <Specificproject projectId={project1} />
+            </div>
+
+            <div style={{ position: "relative", overflow: "hidden" }}>
+              <div
+                data-aos="slide-left"
+                data-aos-delay="300"
+                className="mt-0 pt-0"
+              >
+                <Specificproject projectId={project2} />
+              </div>
+            </div>
+
+            <div
+              data-aos="slide-right"
+              data-aos-delay="300"
+              className="mt-0 pt-0"
+            >
+              <Specificproject projectId={project3} />
+            </div>
+
+            <div style={{ position: "relative", overflow: "hidden" }}>
+              <div
+                data-aos="slide-left"
+                data-aos-delay="300"
+                className="mt-0 pt-0"
+              >
+                <Specificproject projectId={project4} />
+              </div>
+            </div>
+
+            <div
+              data-aos="slide-right"
+              data-aos-delay="200"
+              className="mt-0 pt-0"
+            >
+              <Specificproject projectId={project5} />
+            </div>
           </div>
-        </motion.div>
+        </div>
+
         {/* Laptop & Desktop Layout */}
-        <motion.div className="hidden lg:flex flex-nowrap justify-between space-x-4 text-center">
-          <div className="">
-            <Specificproject projectId={project1} />
-          </div>
-          <div className="">
-            <Specificproject projectId={project2} />
-          </div>
-          <div className="">
-            <Specificproject projectId={project3} />
-          </div>
-          <div className="">
-            <Specificproject projectId={project4} />
-          </div>
-          <div className="">
-            <Specificproject projectId={project5} />
-          </div>
+        <motion.div className="hidden lg:grid grid-cols-3 gap-8 mx-auto max-w-7xl font-satoshi px-3">
+          {[project1, project2, project3, project4, project5].map(
+            (project, index) => (
+              <motion.div key={index}>
+                <Specificproject projectId={project} />
+              </motion.div>
+            )
+          )}
         </motion.div>
-        <section id="experience">
-          <h2 className="text-blue-500 text-3xl mt-4 text-center">
-            EXPERIENCE
-          </h2>
+      </section>
 
-          <div className="flex justify-between max-w-xl">
-            <div>
-              <h2 className="text-white mt-8 font-semibold text-2xl justify-between ">
-                <span>Web developer instructor at Root Node</span>
+      <section id="experience" className="mt-40 ">
+        <h2 className="text-green-500 text-2xl mt-40 mb-6 text-center font-marker">
+          CERTIFICATIONS
+        </h2>
+
+        <div className="grid grid-cols-1 gap-8 max-w-7xl mx-auto px-6 sm:px-6 lg:px-10">
+          <motion.div
+            style={{ position: "sticky", top: 20 }}
+            whileInView={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="z-[10] min-h-[100vh] flex items-center "
+          >
+            <img
+              src="/images/certone.png"
+              alt="certone"
+              className="rounded-xl w-full"
+              loading="lazy"
+            />
+          </motion.div>
+
+          <motion.div
+            style={{ position: "sticky", top: 20 }}
+            whileInView={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="z-[11] min-h-[100vh] flex items-center"
+          >
+            <img
+              src="/images/certthree.png"
+              alt="certthree"
+              className="rounded-xl w-full"
+              loading="lazy"
+            />
+          </motion.div>
+
+          <motion.div
+            style={{ position: "sticky", top: 20 }}
+            whileInView={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="z-[12] min-h-[100vh] flex items-center"
+          >
+            <img
+              src="/images/certtwo.png"
+              alt="certtwo"
+              className="rounded-xl w-full"
+              loading="lazy"
+            />
+          </motion.div>
+
+          <motion.div
+            style={{ position: "sticky", top: 20 }}
+            whileInView={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="z-[13] min-h-[100vh] flex items-center justify-center"
+          >
+            <img
+              src="/images/certfour.png"
+              alt="certfour"
+              className="rounded-xl w-full"
+              loading="lazy"
+            />
+          </motion.div>
+
+          <motion.div
+            style={{ position: "sticky", top: 20 }}
+            whileInView={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="z-[14] min-h-[100vh] flex items-center justify-center"
+          >
+            <img
+              src="/images/certfive.jpg"
+              alt="certfive"
+              className="rounded-xl w-full"
+              loading="lazy"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      <section id="contact" className="mt-[20%]">
+        <div className="mt-5 w-auto">
+          <footer className="text-white flex flex-col">
+            <div className="text-center mb-4">
+              <h2 className="text-green-500 items-center justify-center font-bold text-2xl font-marker">
+                Contact
               </h2>
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-4 px-3 py-6 max-w-7xl mx-auto"
+                data-aos="flip-left"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-delay="300"
+                data-aos-easing="ease-in-out"
+                data-aos-duration="800"
+              >
+                <input
+                  type="text"
+                  placeholder="Kesnia MSI"
+                  name="name"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-black"
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="E.g uchendukesnia2424@gmail.com"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-black"
+                />
+                <textarea
+                  placeholder="Write Message here"
+                  name="message"
+                  className="w-full h-40 px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-black resize-none"
+                ></textarea>
+                <div>
+                  <button
+                    type="submit"
+                    disabled={state.submitting}
+                    className="bg-green-500 mt-4 text-black font-semibold py-4 px-20  border-black rounded-xl font-marker"
+                  >
+                    Let's Talk
+                  </button>
+                </div>
+              </form>
             </div>
-            <div className="text-right text-sm text-white mt-10 ml-11">
-              <span>August 2024</span>
+
+            <div className="flex justify-center space-x-6 mt-7 ">
+              <a href="https://github.com/KESNIAABRAHAM">
+                <img src={github} alt="github" className="w-7 h-7" />
+              </a>
+
+              <a href="https://uchendukesnia2424@gmail.com">
+                <img src={email} alt="Mail" className="w-7 h-7" />
+              </a>
+              <a href="https://www.linkedin.com/in/kesnia-uchendu-405a3924a">
+                <img src={linkedin} alt="github" className="w-7 h-7" />
+              </a>
             </div>
-          </div>
-
-          <div className="mt-4">
-            <p className="text-white text-sm mt-2 max-w-2xl  ">
-              Taught students HTML, CSS, and JavaScript, focusing on building a
-              strong foundation in web programming. Delivered comprehensive
-              lessons on core concepts and best practices for front-end
-              development. Encouraged hands-on learning by providing classwork
-              and assignments after each session. Offered personalized guidance
-              to help students overcome challenges and improve their coding
-              skills. Fostered a collaborative learning environment to inspire
-              creativity and innovation in web design.
-            </p>
-          </div>
-
-          <div className="flex justify-between max-w-xl">
-            <div>
-              <h2 className="text-white mt-8 font-semibold text-2xl justify-between ">
-                <span>Software Engineer Intern at NIIT</span>
-              </h2>
-            </div>
-            <div className="text-right text-sm text-white mt-10 ml-10">
-              <span>April 2023-October2023</span>
-            </div>
-          </div>
-
-          <div className="mt-4">
-            <p className="text-white text-sm mt-2 max-w-2xl ">
-              Led the development of a Jumia clone web app, meticulously
-              crafting the user interface from scratch to closely mirror the
-              original platform. Focused on delivering a seamless user
-              experience by designing intuitive, user-friendly interfaces and
-              implementing client-side validation for web forms. Collaborated
-              with team members to ensure a consistent and responsive design
-              across all devices. Enhanced my technical skills by mastering
-              HTML5, CSS3, JavaScript, jQuery, XML, SQL, and React JS.
-              Participated in code reviews and contributed to improving code
-              quality and development processes. This experience solidified my
-              ability to translate complex requirements into functional and
-              visually appealing web applications."
-            </p>
-          </div>
-
-          <div className="flex justify-between max-w-xl">
-            <div>
-              <h2 className="text-white mt-8 font-semibold text-2xl justify-between ">
-                <span>MTU Location Navigation Web App </span>
-              </h2>
-            </div>
-            <div className="text-right text-sm text-white mt-10 ml-11">
-              <span>January 2024-June2024</span>
-            </div>
-          </div>
-
-          <div className="mt-4">
-            <p className="text-white text-sm mt-2 max-w-2xl ">
-              Developed a location navigation web app for my University at MTU
-              LNS, Ogun, Nigeria, in January 2024. The project aimed to enhance
-              the campus experience by providing an intuitive mapping solution
-              for visitors. Utilizing React and Vite for the frontend, and
-              integrating Firebase for authentication, the app offers a seamless
-              user experience. Implemented Leaflet.js for dynamic mapping and
-              Leaflet Routing Machine for accurate route guidance. This solution
-              significantly reduces the need for visitors to seek directions
-              from students, thereby streamlining campus navigation. The project
-              highlights my skills in modern web technologies and my ability to
-              address real-world challenges through innovative solutions.
-            </p>
-          </div>
-
-          <div className="flex justify-between max-w-xl">
-            <div>
-              <h2 className="text-white mt-8 font-semibold text-2xl justify-between  ">
-                <span>IT Technician at Integrity solutions </span>
-              </h2>
-            </div>
-            <div className="text-right text-sm text-white mt-10 ml-11">
-              <span>March 2023 - October 2023</span>
-            </div>
-          </div>
-
-          <div className="mt-4">
-            <p className="text-white text-sm mt-2 max-w-2xl ">
-              Worked as an IT Technician at Integrity Technologies in Lagos,
-              Nigeria, from May 2023 to October 2023. Diagnosed and resolved
-              client computer hardware and software issues, ensuring continuous
-              operation and user efficiency. Proficient in rapidly identifying
-              root causes of technical problems and implementing effective
-              solutions. Collaborated seamlessly with IT teams, management, and
-              end-users to implement technology upgrades, which contributed to a
-              20% reduction in operational costs.
-            </p>
-          </div>
-        </section>
-        <section id="contact">
-          <div className="mt-5 w-full">
-            <footer className="bg-gray-950 text-white p-8 flex flex-col items-center ">
-              <div>
-                <h2 className="items-center justify-center font-semibold ">
-                  Contact
-                </h2>
-                <p className="mt-10">
-                  Experienced Frontend Developer with 4 years of expertise in
-                  designing and implementing scalable, innovative web solutions.
-                  Skilled in creating responsive, user-centric interfaces using
-                  modern frontend technologies like HTML5, CSS3,
-                  JavaScript,TailwindCss and React.js. Adept at translating
-                  complex requirements into intuitive, efficient and accessible
-                  web applications, ensuring cross-browser compatibility and
-                  optimized performance. Proficient in collaborating with
-                  cross-functional teams, including designers, backend
-                  developers, and product managers, to deliver high-quality
-                  products on time. Strong understanding of UI/UX principles,
-                  version control systems like Git, and familiarity with agile
-                  methodologies. Passionate about staying updated with the
-                  latest industry trends and continuously enhancing skills to
-                  build cutting-edge web experiences.
-                </p>
-              </div>
-
-              <div className="flex justify-center space-x-6 mt-7 ">
-                <a href="https://github.com/KESNIAABRAHAM">
-                  <img src={github} alt="github" className="w-7 h-7" />
-                </a>
-
-                <a href="https://uchendukesnia2424@gmail.com">
-                  <img src={email} alt="Mail" className="w-7 h-7" />
-                </a>
-                <a href="https://x.com/kesniaU">
-                  <img src={twitter} alt="Twitter" className="w-7 h-7" />
-                </a>
-                <a href="https://www.linkedin.com/in/kesnia-uchendu-405a3924a">
-                  <img src={linkedin} alt="github" className="w-7 h-7" />
-                </a>
-              </div>
-            </footer>
-          </div>
-        </section>
-      </div>
+          </footer>
+        </div>
+      </section>
     </div>
   );
-}
+};
 
 export default Portfolio;
