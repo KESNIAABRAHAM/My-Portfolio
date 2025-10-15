@@ -228,15 +228,15 @@ const Portfolio = () => {
 
       <section id="experience" className="mt-40 ">
         <h2 className="text-green-500 text-2xl mt-40 mb-6 text-center font-marker">
-          CERTIFICATIONS
+          CERTIFICATES
         </h2>
 
-        <div className="grid grid-cols-1 gap-8 max-w-7xl mx-auto px-6 sm:px-6 lg:px-10">
+        <div className="grid grid-cols-1 gap-0 max-w-7xl mx-auto px-6 sm:px-6 lg:px-10">
           <motion.div
             style={{ position: "sticky", top: 20 }}
             whileInView={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
-            className="z-[10] min-h-[100vh] flex items-center "
+            className="z-[10] min-h-[100vh] flex items-center"
           >
             <img
               src="/images/certone.png"
