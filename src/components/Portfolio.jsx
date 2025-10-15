@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import Navbar from "./navbar.jsx";
+import Navbar from "./Navbar.jsx";
 import csslogo from "../images/cssicon.png";
 import "../components/Marquee.css";
 import javascriptlogo from "../images/javascriptlogo.png";
@@ -20,7 +20,7 @@ import jupyterlogo from "../images/Jupyterlogo.png";
 import Npmlogo from "../images/NPM.png";
 import Azioslogo from "../images/Azios.png";
 import Typescriptlogo from "../images/TypeScript.png";
-import Navbarmobile from "./navbarmobile.tsx";
+import Navbarmobile from "./Navbarmobile.jsx";
 import Specificproject from "./Specificproject.jsx";
 
 import { motion } from "framer-motion";
