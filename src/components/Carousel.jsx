@@ -9,10 +9,14 @@ const Carousel = () => {
 
   return (
     <div className="flex flex-col items-center mt-20 relative">
-      <h2 className="text-white text-center mt-10 font-bold font-marker text-3xl">Hey there! I'm Kesnia 👋</h2>
-      <h2 className="text-white text-center m-4 font-bold text-2xl font-marker">
-        And I am a <span className="text-green-500">{text}</span>
+      <h2 className="text-white text-center mt-10 font-bold font-marker text-3xl">
+        Hey there! I'm Kesnia 👋
       </h2>
+      <div className="h-[50px] flex items-center justify-center m-3">
+        <h2 className="text-white text-center font-bold text-2xl font-marker">
+          And I am a <span className="text-green-500">{text}</span>
+        </h2>
+      </div>
 
       <img
         src={avatar}

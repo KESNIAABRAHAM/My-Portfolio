@@ -91,23 +91,22 @@ const Portfolio = () => {
       >
         <Carousel />
         <h1 className="text-white text-3xl font-bold mt-4 mb-7 font-marker">
-          I code for a living🤯
+          I code for a living 👨‍💻
         </h1>
 
         <h2
           className="text-white max-w-3xl text-center text-md font-satoshi"
           data-aos="zoom-in-up"
         >
-          I’m a Frontend Engineer with over 3 years of professional experience
-          building responsive and user-focused web applications. I take pride in
-          writing clean, maintainable code that scales well across projects. I
-          focus on crafting intuitive interfaces and smooth user experiences,
-          with attention to performance and design consistency. I enjoy working
-          with modern frontend tools and techniques, including component-based
-          architecture and animation libraries. Whether building solo or
-          collaborating with teams, I bring a thoughtful approach to UI
-          development and a commitment to delivering polished, functional
-          products.
+          I’m a Frontend Engineer passionate about crafting clean, responsive
+          interfaces that feel intuitive and perform seamlessly. My work centers
+          on turning design into interactive experiences blending thoughtful
+          UI architecture with smooth animations and scalable components. I
+          thrive in environments where attention to detail meets creative
+          problem-solving, whether I’m building solo or collaborating across
+          teams. With a strong grasp of modern frontend tools and a love for
+          design consistency, I aim to deliver products that not only look great
+          but feel effortless to use.
         </h2>
 
         <div
