@@ -300,6 +300,45 @@ const Portfolio = () => {
               loading="lazy"
             />
           </motion.div>
+           <motion.div
+            style={{ position: "sticky", top: 20 }}
+            whileInView={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="z-[15] min-h-[100vh] flex items-center justify-center"
+          >
+            <img
+              src="/images/certsix.png"
+              alt="certsix"
+              className="rounded-xl w-full"
+              loading="lazy"
+            />
+          </motion.div>
+           <motion.div
+            style={{ position: "sticky", top: 20 }}
+            whileInView={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="z-[16] min-h-[100vh] flex items-center justify-center"
+          >
+            <img
+              src="/images/certseven.png"
+              alt="certseven"
+              className="rounded-xl w-full"
+              loading="lazy"
+            />
+          </motion.div>
+            <motion.div
+            style={{ position: "sticky", top: 20 }}
+            whileInView={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="z-[17] min-h-[100vh] flex items-center justify-center"
+          >
+            <img
+              src="/images/certeight.png"
+              alt="certeight"
+              className="rounded-xl w-full"
+              loading="lazy"
+            />
+          </motion.div>
         </div>
       </section>
 
