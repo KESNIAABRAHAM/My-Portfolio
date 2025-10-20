@@ -55,7 +55,7 @@ const Portfolio = () => {
       <div className="fixed w-full flex-wrap z-20">
         <div className="hidden w-full lg:flex">
           <div className="flex-shrink-0 ml-5 mt-3">
-            <img src={logo} alt="Brand Logo" className="w-20 h-auto" />
+            <img src={logo} alt="Brand Logo" className="w-20 h-auto" loading="lazy"/>
           </div>
           <Navbar />
         </div>
