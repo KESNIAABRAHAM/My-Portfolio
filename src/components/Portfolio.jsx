@@ -35,6 +35,7 @@ const Portfolio = () => {
   const project3 = 3;
   const project4 = 4;
   const project5 = 5;
+  const project6 = 6;
 
   const toggleNavbar = () => {
     Setisopen(!isopen);
@@ -119,7 +120,7 @@ const Portfolio = () => {
             </button>
           </a>
           <a
-            href="https://drive.google.com/uc?export=download&id=14uRJKDDXdqOSI0owI_wySQki1AYKjgAt"
+            href="https://drive.google.com/uc?export=download&id=1MwofKkY8Z--SNWEjWhyiQM7aBzTdwxs9"
             download
           >
             <button className="bg-transparent text-white font-semibold py-4 px-10 border border-white rounded-2xl font-marker">
@@ -210,12 +211,19 @@ const Portfolio = () => {
             >
               <Specificproject projectId={project5} />
             </div>
+            <div
+              data-aos="slide-right"
+              data-aos-delay="200"
+              className="mt-0 pt-0"
+            >
+              <Specificproject projectId={project6} />
+            </div>
           </div>
         </div>
 
         {/* Laptop & Desktop Layout */}
         <motion.div className="hidden lg:grid grid-cols-3 gap-8 mx-auto max-w-7xl font-satoshi px-3">
-          {[project1, project2, project3, project4, project5].map(
+          {[project1, project2, project3, project4, project5,project6].map(
             (project, index) => (
               <motion.div key={index}>
                 <Specificproject projectId={project} />

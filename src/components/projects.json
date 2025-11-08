@@ -38,6 +38,14 @@
         "description": "Built predictive models using logistic regression and decision trees to forecast product return likelihood for GlobalStore Inc. Leveraged Python libraries like pandas, scikit-learn, and seaborn to analyze thousands of transactions and uncover customer behavior patterns. The solution helps reduce returns, boost satisfaction, and minimize e-waste.",
         "image": "images/AIBusiness.png",
         "link": "https://github.com/KESNIAABRAHAM/ML-Business-Analytics"
+      },
+
+      {
+        "id": 6,
+        "name": "Smartsend Finance",
+        "description": "SmartSend is a modern fintech platform designed to simplify and accelerate digital payments. Whether you're sending money locally or across borders, SmartSend offers fast, secure, and low-cost transactions with real-time tracking and intuitive user experience. Built for individuals and businesses alike, SmartSend empowers financial freedom with smart tools and transparent pricing. Built with modern web technologies like React, Vite, and Tailwind CSS, and powered by a robust ecosystem of tools including Axios, Formik, React Router, Yup, and more SmartSend is engineered for performance, scalability, and delightful user interactions.",
+        "image": "images/Smartsend.png",
+        "link": "https://www.smartsendfinance.com/"
       }
 
   ]
