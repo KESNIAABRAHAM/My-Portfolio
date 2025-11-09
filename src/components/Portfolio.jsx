@@ -360,7 +360,7 @@ const Portfolio = () => {
               <form
                 onSubmit={handleSubmit}
                 className="flex flex-col gap-4 px-3 py-6 max-w-7xl mx-auto"
-                data-aos="flip-left"
+                data-aos="zoom-in-up"
                 data-aos-anchor-placement="top-bottom"
                 data-aos-delay="300"
                 data-aos-easing="ease-in-out"

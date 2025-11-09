@@ -15,19 +15,19 @@ function Specificproject({ projectId }) {
     <>
       <div
         key={project.id}
-        className="h-[750px] flex flex-col overflow-hidden rounded-xl bg-gray-700 mb-8"
+        className="h-full flex flex-col overflow-hidden rounded-xl bg-gray-700 mb-8"
       >
         {/* Image section */}
-        <div className="w-full">
+        <div className="w-full h-[350px] overflow-hidden rounded-md">
           <img
             src={project.image}
             alt={project.name}
-            className="w-full h-auto object-cover"
+            className="w-full h-full object-cover object-center"
           />
         </div>
 
         {/* Content section */}
-        <div className="px-6 py-4 flex flex-col flex-grow">
+        <div className="px-4 py-6 flex flex-col flex-grow ">
           <div>
             <h2 className="font-bold text-xl mb-2 text-white text-center font-marker">
               {project.name}
