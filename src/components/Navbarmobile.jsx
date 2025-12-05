@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 const Navbarmobile = () => {
   return (
     <nav className="mt-20 px-6 ">
-      <ul className="flex flex-col space-y-6 text-white text-lg">
+      <ul className="flex flex-col space-y-6 text-white text-lg text-center">
         <li className="hover:text-green-500 font-marker cursor-pointer">
           <Link to="home" smooth={true} duration={500}>
             Home

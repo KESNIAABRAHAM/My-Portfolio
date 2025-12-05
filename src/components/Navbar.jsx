@@ -8,28 +8,31 @@ const Navbar = () => {
         <ul className="flex space-x-10 items-center ">
           <li className="text-green-500 font-marker hover:text-blue-300 cursor-pointer">
             <Link to="home" smooth={true} duration={500}>
-              Home
+              {"</Home>"}
             </Link>
           </li>
             <li className="text-green-500 font-marker hover:text-blue-300 cursor-pointer">
             <Link to="Mystack" smooth={true} duration={500}>
-              Skills
+             
+             {"</Skills>"}
             </Link>
           </li>
 
           <li className="text-green-500 font-marker hover:text-blue-300 cursor-pointer">
             <Link to="projects" smooth={true} duration={500}>
-              Projects
+             
+             {"</Projects>"}
             </Link>
           </li>
+
           <li className="text-green-500 font-marker hover:text-blue-300 cursor-pointer">
             <Link to="experience" smooth={true} duration={500}>
-             Certificates
+            { "</Certificates>"}
             </Link>
           </li>
           <li className="text-green-500 font-marker hover:text-blue-300 cursor-pointer">
             <Link to="contact" smooth={true} duration={500}>
-              Contact
+             {"</Contact>"}
             </Link>
           </li>
         </ul>

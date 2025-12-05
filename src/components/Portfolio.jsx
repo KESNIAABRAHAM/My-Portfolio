@@ -22,6 +22,7 @@ import Azioslogo from "../images/Azios.png";
 import Typescriptlogo from "../images/TypeScript.png";
 import Navbarmobile from "./Navbarmobile.jsx";
 import Specificproject from "./Specificproject.jsx";
+import TechCard from "./Techcard.jsx";
 
 import { motion } from "framer-motion";
 import { useForm } from "@formspree/react";
@@ -54,11 +55,16 @@ const Portfolio = () => {
   return (
     <div className="bg-black mx-auto min-h-screen ">
       <div className="fixed w-full flex-wrap z-20">
-        <div className="hidden w-full lg:flex">
+        <div className="hidden  lg:flex   bg-white/10 backdrop-blur-md  rounded-2xl shadow-lg border border-white/20">
           <div className="flex-shrink-0 ml-5 mt-3">
-            <img src={logo} alt="Brand Logo" className="w-20 h-auto" loading="lazy"/>
+            <img
+              src={logo}
+              alt="Brand Logo"
+              className="w-20 h-auto"
+              loading="lazy"
+            />
           </div>
-          <Navbar />
+          <Navbar/>
         </div>
 
         <div className="flex items-center justify-between px-3 py-2 lg:hidden">
@@ -101,9 +107,9 @@ const Portfolio = () => {
         >
           I’m a Frontend Engineer passionate about crafting clean, responsive
           interfaces that feel intuitive and perform seamlessly. My work centers
-          on turning design into interactive experiences blending thoughtful
-          UI architecture with smooth animations and scalable components. I
-          thrive in environments where attention to detail meets creative
+          on turning design into interactive experiences blending thoughtful UI
+          architecture with smooth animations and scalable components. I thrive
+          in environments where attention to detail meets creative
           problem-solving, whether I’m building solo or collaborating across
           teams. With a strong grasp of modern frontend tools and a love for
           design consistency, I aim to deliver products that not only look great
@@ -133,31 +139,23 @@ const Portfolio = () => {
         id="Mystack"
         className="text-green-500 text-center text-2xl mt-[20%] mb-8 font-marker"
       >
-        Skills
+        Tech Stack
       </h2>
-      <div className="relative w-full overflow-hidden z-10">
-        <div className="marquee space-x-5">
-          <img src={csslogo} alt="csslogo" className="w-50 h-20" />
-          <img
-            src={javascriptlogo}
-            alt="javascriptlogo"
-            className="w-50 h-20"
-          />
-          <img src={firebaselogo} alt="firebaselogo" className="w-50 h-20" />
-          <img src={htmllogo} alt="htmllogo" className="w-50 h-20 " />
-          <img src={pythonlogo} alt="pythonlogo" className="w-50 h-20 " />
-          <img src={reacticon} alt="reacticon" className="w-50 h-20 " />
-          <img
-            src={Typescriptlogo}
-            alt="Typescriptlogo"
-            className="w-50 h-20 "
-          />
-          <img src={tailwindlogo} alt="tailwindlogo" className="w-50 h-20 " />
-          <img src={Npmlogo} alt="Npmlogo" className="w-50 h-20 " />
-          <img src={vitelogo} alt="vitelogo" className="w-50 h-20 " />
-          <img src={Azioslogo} alt="Azioslogo" className="w-50 h-20 " />
-          <img src={jquerylogo} alt="jquerylogo" className="w-50 h-20 " />
-          <img src={jupyterlogo} alt="jupyterlogo" className="w-50 h-20 " />
+      <div className="relative mx-auto overflow-hidden z-10 max-w-7xl">
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4 justify-items-center px-4">
+          <TechCard src={csslogo} alt="CSS" />
+          <TechCard src={javascriptlogo} alt="JavaScript" />
+          <TechCard src={firebaselogo} alt="Firebase" />
+          <TechCard src={htmllogo} alt="HTML" />
+          <TechCard src={pythonlogo} alt="Python" />
+          <TechCard src={reacticon} alt="React" />
+          <TechCard src={Typescriptlogo} alt="Typescript" />
+          <TechCard src={tailwindlogo} alt="Tailwind CSS" />
+          <TechCard src={Npmlogo} alt="NPM" />
+          <TechCard src={vitelogo} alt="Vite" />
+          <TechCard src={Azioslogo} alt="Axios" />
+          <TechCard src={jquerylogo} alt="jQuery" />
+          <TechCard src={jupyterlogo} alt="Jupyter" />
         </div>
       </div>
 
@@ -212,7 +210,7 @@ const Portfolio = () => {
               <Specificproject projectId={project5} />
             </div>
             <div
-              data-aos="slide-right"
+              data-aos="slide-left"
               data-aos-delay="200"
               className="mt-0 pt-0"
             >
@@ -223,7 +221,7 @@ const Portfolio = () => {
 
         {/* Laptop & Desktop Layout */}
         <motion.div className="hidden lg:grid grid-cols-3 gap-8 mx-auto max-w-7xl font-satoshi px-3">
-          {[project1, project2, project3, project4, project5,project6].map(
+          {[project1, project2, project3, project4, project5, project6].map(
             (project, index) => (
               <motion.div key={index}>
                 <Specificproject projectId={project} />
@@ -308,7 +306,7 @@ const Portfolio = () => {
               loading="lazy"
             />
           </motion.div>
-           <motion.div
+          <motion.div
             style={{ position: "sticky", top: 20 }}
             whileInView={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
@@ -321,7 +319,7 @@ const Portfolio = () => {
               loading="lazy"
             />
           </motion.div>
-           <motion.div
+          <motion.div
             style={{ position: "sticky", top: 20 }}
             whileInView={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
@@ -334,7 +332,7 @@ const Portfolio = () => {
               loading="lazy"
             />
           </motion.div>
-            <motion.div
+          <motion.div
             style={{ position: "sticky", top: 20 }}
             whileInView={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
