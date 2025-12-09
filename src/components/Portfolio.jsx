@@ -143,7 +143,7 @@ const Portfolio = () => {
       </h2>
       <div className="relative mx-auto overflow-hidden z-10 max-w-7xl">
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4 justify-items-center px-4">
-          <TechCard src={csslogo} alt="CSS" />
+          <TechCard src={csslogo} alt="CSS"/>
           <TechCard src={javascriptlogo} alt="JavaScript" />
           <TechCard src={firebaselogo} alt="Firebase" />
           <TechCard src={htmllogo} alt="HTML" />
@@ -210,7 +210,7 @@ const Portfolio = () => {
               <Specificproject projectId={project5} />
             </div>
             <div
-              data-aos="slide-left"
+              data-aos="slide-up"
               data-aos-delay="200"
               className="mt-0 pt-0"
             >
