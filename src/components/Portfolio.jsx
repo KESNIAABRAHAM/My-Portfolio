@@ -37,6 +37,7 @@ const Portfolio = () => {
   const project4 = 4;
   const project5 = 5;
   const project6 = 6;
+  const project7 = 7;
 
   const toggleNavbar = () => {
     Setisopen(!isopen);
@@ -64,7 +65,7 @@ const Portfolio = () => {
               loading="lazy"
             />
           </div>
-          <Navbar/>
+          <Navbar />
         </div>
 
         <div className="flex items-center justify-between px-3 py-2 lg:hidden">
@@ -98,7 +99,7 @@ const Portfolio = () => {
       >
         <Carousel />
         <h1 className="text-white text-3xl font-bold mt-4 mb-7 font-marker">
-          I code for a living 👨‍💻
+          I build for the web 👨‍💻
         </h1>
 
         <h2
@@ -143,7 +144,7 @@ const Portfolio = () => {
       </h2>
       <div className="relative mx-auto overflow-hidden z-10 max-w-7xl">
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4 justify-items-center px-4">
-          <TechCard src={csslogo} alt="CSS"/>
+          <TechCard src={csslogo} alt="CSS" />
           <TechCard src={javascriptlogo} alt="JavaScript" />
           <TechCard src={firebaselogo} alt="Firebase" />
           <TechCard src={htmllogo} alt="HTML" />
@@ -210,18 +211,25 @@ const Portfolio = () => {
               <Specificproject projectId={project5} />
             </div>
             <div
-              data-aos="slide-up"
+              data-aos="slide-left"
               data-aos-delay="200"
               className="mt-0 pt-0"
             >
               <Specificproject projectId={project6} />
+            </div>
+            <div
+              data-aos="slide-right"
+              data-aos-delay="200"
+              className="mt-0 pt-0"
+            >
+              <Specificproject projectId={project7} />
             </div>
           </div>
         </div>
 
         {/* Laptop & Desktop Layout */}
         <motion.div className="hidden lg:grid grid-cols-3 gap-8 mx-auto max-w-7xl font-satoshi px-3">
-          {[project1, project2, project3, project4, project5, project6].map(
+          {[project1, project2, project3, project4, project5, project6,project7].map(
             (project, index) => (
               <motion.div key={index}>
                 <Specificproject projectId={project} />

@@ -1,51 +1,56 @@
 [
-    {
-      "id": 1,
-      "name": "TO DO APP",
-      "description": "This Todo App, built using React for dynamic UI and Tailwind CSS for streamlined styling, allows users to easily add, edit, and delete tasks. With a clean, responsive design, it provides a seamless user experience on both desktop and mobile. The app efficiently manages state with React hooks, ensuring real-time updates and smooth interactions.",
-      "image": "images/Todoapp.png",
-      "link": "http://to-do-app-kohl-seven.vercel.app/"
-    },
+  {
+    "id": 1,
+    "name": "TO DO APP",
+    "description": "This Todo App, built using React for dynamic UI and Tailwind CSS for streamlined styling, allows users to easily add, edit, and delete tasks. With a clean, responsive design, it provides a seamless user experience on both desktop and mobile. The app efficiently manages state with React hooks, ensuring real-time updates and smooth interactions.",
+    "image": "images/Todoapp.png",
+    "link": "http://to-do-app-kohl-seven.vercel.app/"
+  },
 
-    {
-        "id": 2,
-        "name": " University Navigation System | React, Firebase & Leaflet.js",
-        "description": "This location navigation system, developed with React+Vite,utilizes Firebase for secure user authentication and Leaflet.js for mapping. Leaflet Routing Machine efficiently provides routes, helping users easily navigate the university environment. The system combines a smooth UI with accurate,real-time navigation, delivering a user-friendly experience.",
-        "image": "images/Lnsapp.png",
-        "link": "https://mtu-lns.vercel.app/"
-      },
+  {
+    "id": 2,
+    "name": " University Navigation System | React, Firebase & Leaflet.js",
+    "description": "This location navigation system, developed with React+Vite,utilizes Firebase for secure user authentication and Leaflet.js for mapping. Leaflet Routing Machine efficiently provides routes, helping users easily navigate the university environment. The system combines a smooth UI with accurate,real-time navigation, delivering a user-friendly experience.",
+    "image": "images/Lnsapp.png",
+    "link": "https://mtu-lns.vercel.app/"
+  },
 
-      {
-        "id": 3,
-        "name": "Basic Calculator | HTML5, CSS3 & JavaScript",
-        "description": "This responsive basic calculator, built with HTML5, CSS3, and JavaScript, handles essential arithmetic operations efficiently. Designed with a focus on usability, it adapts seamlessly to any screen size, providing a smooth experience across all devices.",
-        "image": "images/Calculatorapp.png",
-        "link": "https://calculator-web-app.tiiny.site/"
-      },
+  {
+    "id": 3,
+    "name": "Basic Calculator | HTML5, CSS3 & JavaScript",
+    "description": "This responsive basic calculator, built with HTML5, CSS3, and JavaScript, handles essential arithmetic operations efficiently. Designed with a focus on usability, it adapts seamlessly to any screen size, providing a smooth experience across all devices.",
+    "image": "images/Calculatorapp.png",
+    "link": "https://calculator-web-app.tiiny.site/"
+  },
 
-      {
-        "id": 4,
-        "name": "LinkZap",
-        "description": "Simplify and streamline your URLs with ease. Instantly shorten long links, customize them for a personal touch, and track clicks effortlessly",
-        "image": "images/linkzap.png",
-        "link": "https://link-zap-woad.vercel.app/"
-      },
+  {
+    "id": 4,
+    "name": "LinkZap",
+    "description": "Simplify and streamline your URLs with ease. Instantly shorten long links, customize them for a personal touch, and track clicks effortlessly",
+    "image": "images/linkzap.png",
+    "link": "https://link-zap-woad.vercel.app/"
+  },
 
-      
-      {
-        "id": 5,
-        "name": "AI for business analytics in Practice",
-        "description": "Built predictive models using logistic regression and decision trees to forecast product return likelihood for GlobalStore Inc. Leveraged Python libraries like pandas, scikit-learn, and seaborn to analyze thousands of transactions and uncover customer behavior patterns. The solution helps reduce returns, boost satisfaction, and minimize e-waste.",
-        "image": "images/AIBusiness.png",
-        "link": "https://github.com/KESNIAABRAHAM/ML-Business-Analytics"
-      },
+  {
+    "id": 5,
+    "name": "AI for business analytics in Practice",
+    "description": "Built predictive models using logistic regression and decision trees to forecast product return likelihood for GlobalStore Inc. Leveraged Python libraries like pandas, scikit-learn, and seaborn to analyze thousands of transactions and uncover customer behavior patterns. The solution helps reduce returns, boost satisfaction, and minimize e-waste.",
+    "image": "images/AIBusiness.png",
+    "link": "https://github.com/KESNIAABRAHAM/ML-Business-Analytics"
+  },
 
-      {
-        "id": 6,
-        "name": "Smartsend Finance",
-        "description": "SmartSend is a modern fintech platform designed to simplify and accelerate digital payments. Whether you're sending money locally or across borders, SmartSend offers fast, secure, and low-cost transactions with real-time tracking and intuitive user experience. Built for individuals and businesses alike, SmartSend empowers financial freedom with smart tools and transparent pricing. Built with modern web technologies like React, Vite, and Tailwind CSS, and powered by a robust ecosystem of tools including Axios, Formik, React Router, Yup, and more SmartSend is engineered for performance, scalability, and delightful user interactions.",
-        "image": "images/Smartsend.png",
-        "link": "https://www.smartsendfinance.com/"
-      }
-
-  ]
+  {
+    "id": 6,
+    "name": "Smartsend Finance",
+    "description": "SmartSend is a modern fintech platform designed to simplify and accelerate digital payments. Whether you're sending money locally or across borders, SmartSend offers fast, secure, and low-cost transactions with real-time tracking and intuitive user experience. Built for individuals and businesses alike, SmartSend empowers financial freedom with smart tools and transparent pricing. Built with modern web technologies like React, Vite, and Tailwind CSS, and powered by a robust ecosystem of tools including Axios, Formik, React Router, Yup, and more SmartSend is engineered for performance, scalability, and delightful user interactions.",
+    "image": "images/Smartsend.png",
+    "link": "https://www.smartsendfinance.com/"
+  },
+  {
+    "id": 7,
+    "name": "Tunkem International School",
+    "description": "A responsive school website built to showcase academic programs, news, and essential information, with a focus on accessibility, performance, and user-friendly navigation",
+    "image": "images/tunkem.png",
+    "link": "https://tunkem-school.vercel.app/"
+  }
+]
