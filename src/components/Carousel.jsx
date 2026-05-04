@@ -1,5 +1,6 @@
 import { useTypewriter } from "react-simple-typewriter";
-import avatar from "../images/Avatar.png";
+// import avatar from "../images/Avatar.png";
+import profilepic from "../images/profilepic.jfif"
 
 const Carousel = () => {
   const [text] = useTypewriter({
@@ -9,17 +10,17 @@ const Carousel = () => {
 
   return (
     <div className="flex flex-col items-center mt-20 relative">
-      <h2 className="text-white text-center mt-10 font-bold font-marker text-3xl">
+      <h2 className="text-white text-center mt-20 font-bold font-marker text-3xl">
         Hey there! I'm Kesnia 👋
       </h2>
-      <div className="h-[50px] flex items-center justify-center m-3">
+      <div className="h-[60px] flex items-center justify-center m-3">
         <h2 className="text-white text-center font-bold text-2xl font-marker">
           And I am a <span className="text-green-500">{text}</span>
         </h2>
       </div>
 
       <img
-        src={avatar}
+        src={profilepic}
         alt="avatar"
         className="w-40 h-25 rounded-full bg-gradient-to-b from-orange-500 to-purple-500 object-cover block shrink-0"
       />

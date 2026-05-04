@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "name": "TO DO APP",
-    "description": "This Todo App, built using React for dynamic UI and Tailwind CSS for streamlined styling, allows users to easily add, edit, and delete tasks. With a clean, responsive design, it provides a seamless user experience on both desktop and mobile. The app efficiently manages state with React hooks, ensuring real-time updates and smooth interactions.",
-    "image": "images/Todoapp.png",
-    "link": "http://to-do-app-kohl-seven.vercel.app/"
+    "name": "Custom CMS application",
+    "description": "A full-featured Content Management System dashboard built from scratch, enabling non-technical administrators to manage and publish live content across two integrated public-facing websites no developer involvement required for day-to-day content operations.",
+    "image": "images/CMS.png",
+    "link": "https://staging.dpbmbcvvizn69.amplifyapp.com/dashboard/edit"
   },
 
   {
@@ -42,7 +42,7 @@
   {
     "id": 6,
     "name": "Smartsend Finance",
-    "description": "SmartSend is a modern fintech platform designed to simplify and accelerate digital payments. Whether you're sending money locally or across borders, SmartSend offers fast, secure, and low-cost transactions with real-time tracking and intuitive user experience. Built for individuals and businesses alike, SmartSend empowers financial freedom with smart tools and transparent pricing. Built with modern web technologies like React, Vite, and Tailwind CSS, and powered by a robust ecosystem of tools including Axios, Formik, React Router, Yup, and more SmartSend is engineered for performance, scalability, and delightful user interactions.",
+    "description": "SmartSend is a modern fintech platform designed to simplify and accelerate digital payments. Whether you're sending money locally or across borders, SmartSend offers fast, secure, and low-cost transactions with real-time tracking and intuitive user experience. Built for individuals and businesses alike, SmartSend empowers financial freedom with smart tools and transparent pricing. Built with modern web technologies like React, Vite, and Tailwind CSS, and powered by a robust ecosystem of tools including React Router and more SmartSend is engineered for performance, scalability, and delightful user interactions.",
     "image": "images/Smartsend.png",
     "link": "https://www.smartsendfinance.com/"
   },
