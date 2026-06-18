@@ -4,8 +4,8 @@ const Navbar = () => {
   return (
     <>
       
-      <nav className="flex ml-[40%]  space-x-4 font-bold text-lg md:px-10">
-        <ul className="flex space-x-10 items-center ">
+      <nav className="flex mx-auto space-x-4 font-bold text-lg md:px-10">
+        <ul className="flex space-x-10 items-center text-center">
           <li className="text-green-500 font-marker hover:text-blue-300 cursor-pointer">
             <Link to="home" smooth={true} duration={500}>
               {"</Home>"}

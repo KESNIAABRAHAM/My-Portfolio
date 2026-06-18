@@ -193,7 +193,7 @@ const Portfolio = () => {
             <div data-aos="slide-right" data-aos-delay="200" className="mt-0 pt-0">
               <Specificproject projectId={project5} />
             </div>
-            <div data-aos="slide-left" data-aos-delay="200" className="mt-0 pt-0">
+            <div data-aos="slide-up" data-aos-delay="200" className="mt-0 pt-0">
               <Specificproject projectId={project6} />
             </div>
           </div>
